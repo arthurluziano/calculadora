@@ -42,7 +42,7 @@ numbers.map((element) => {
     element.addEventListener('click', (event) => {
         surprise()
 
-        if (resultStatus || result.innerHTML == 'Made by <br> Arthur Luziano :)') {
+        if (resultStatus || result.innerHTML == 'Made by <br> Arthur Luziano.') {
             result.innerHTML = ''
             resultStatus = false
         }
@@ -50,7 +50,7 @@ numbers.map((element) => {
         if (event.target.innerHTML == ',') {
             if (!decimal) {
                 if (result.innerHTML == '') {
-                    result.innerHTML += `0${event.target.innerHTML}`
+                    result.innerHTML += `0.`
                     decimal = true
                 }
             }
@@ -71,7 +71,7 @@ operators.map((element) => {
             } else if (event.target.innerHTML == 'Hi!') {
                 let resultDisplay = document.querySelector('.resultDisplay')
                 resultDisplay.style.justifyContent = 'center'
-                result.innerHTML = 'Made by <br> Arthur Luziano :)'
+                result.innerHTML = 'Made by <br> Arthur Luziano.'
             } else {
                 alert('Formato usado inválido.')
             }
